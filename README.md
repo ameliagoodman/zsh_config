@@ -29,5 +29,20 @@ Uncomment lines 80 + 81 in `~/.oh-my-zsh/lib/key-bindings.zsh` to enable autocom
 
 #### Manual settings:
 
-`to make iterm key shortcuts like mac key shortcuts` 
-iterm > preferences> profiles > keys > presets: natural text editing
+to make iterm key shortcuts like mac key shortcuts:
+
+`iterm > preferences> profiles > keys > presets: natural text editing`
+
+to add color profile
+
+`iterm > preferences> profiles> colors> color presets> import`
+
+add icons
+
+`iterm > preferences> profiles> text > Font> Droid Sans Mono for Powerline (size 18)`
+
+`iterm > preferences> profiles> text > Non-ASCII Font> Hack Nerd Font (size 18)`
+
+`iterm > preferences> profiles> text > Non-ASCII Font> check use ligatures and anti-aliased boxes`
+
+
