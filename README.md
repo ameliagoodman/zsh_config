@@ -15,7 +15,10 @@ Make it pretty:
 `brew cask install font-hack-nerd-font`
 
 Download autocomplete:
+
 `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+
+Uncomment lines 80 + 81 in `~/.oh-my-zsh/lib/key-bindings.zsh` to enable autocomplete search with up and down arrows
 
 
 #### Manual settings:
