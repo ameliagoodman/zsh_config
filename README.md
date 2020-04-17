@@ -29,6 +29,11 @@ Uncomment lines 80 + 81 in `~/.oh-my-zsh/lib/key-bindings.zsh` to enable autocom
 
 #### Manual settings:
 
+open new tab from current dir
+
+`iterm > preferences> profiles > general > Working Directory: reuse previous session's dir`
+
+
 to make iterm key shortcuts like mac key shortcuts:
 
 `iterm > preferences> profiles > keys > presets: natural text editing`
