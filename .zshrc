@@ -3,8 +3,6 @@ source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 #Base shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/go/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ameliagoodman/.oh-my-zsh"
@@ -20,6 +18,16 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# setting for zsh-autocompletion
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -64,9 +72,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(zsh-autosuggestions)
-plugins=(virtualenv)
+plugins=(git zsh-autosuggestions virtualenv vscode)
 
 
 # User configuration
@@ -125,8 +131,16 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+
+autoload -Uz compinit && compinit
 
 alias k=kubectl
 alias kns=kubens
 alias kctx=kubectx
-
+export PATH="/usr/local/opt/ruby/bin:$PATH
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH
+export GOPATH=$HOME/go
