@@ -26,6 +26,9 @@ Download autocomplete:
 
 Uncomment lines 80 + 81 in `~/.oh-my-zsh/lib/key-bindings.zsh` to enable autocomplete search with up and down arrows
 
+Download git autocomplete:
+https://medium.com/@oliverspryn/adding-git-completion-to-zsh-60f3b0e7ffbc
+
 
 #### Manual settings:
 
@@ -38,9 +41,11 @@ to make iterm key shortcuts like mac key shortcuts:
 
 `iterm > preferences> profiles > keys > presets: natural text editing`
 
+
 to add color profile
 
 `iterm > preferences> profiles> colors> color presets> import`
+
 
 add icons
 
